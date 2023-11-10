@@ -12,9 +12,9 @@ try {
 $tabela = "CREATE TABLE IF NOT EXISTS CLIENTE(
     nome TEXT,
     cpf TEXT,
-    pagamento TEXT,
-    idade TEXT,
-    bicicleta TEXT,
+    pagamento FLOAT,
+    idade INT,
+    idbicicleta INT,
     primary key(cpf)
 )";
 

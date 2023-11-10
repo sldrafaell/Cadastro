@@ -4,14 +4,14 @@ class Cliente {
     private $cpf;
     private $pagamento;
     private $idade;
-    private $bicicleta;
+    private $idbicicleta;
 
-    public function __construct($nome, $cpf, $pagamento, $idade, $bicicleta) {
+    public function __construct($nome, $cpf, $pagamento, $idade, $idbicicleta) {
         $this->setNome($nome);
         $this->setCpf($cpf);
         $this->setPagamento($pagamento);
         $this->setIdade($idade);
-        $this->setBicicleta($bicicleta);
+        $this->setIdbicicleta($idbicicleta);
     }
     public function setNome($nome) {
         $this->nome = $nome;
@@ -25,8 +25,8 @@ class Cliente {
     public function setIdade($idade) {
         $this->idade = $idade;
     }
-    public function setBicicleta($bicicleta) {
-        $this->bicleta = $bicicleta;
+    public function setidbicicleta($idbicicleta) {
+        $this->idbicleta = $idbicicleta;
     }
 
     public function getNome() {
@@ -41,7 +41,7 @@ class Cliente {
     public function getIdade() {
         return $this->idade;
     }
-    public function getBicicleta() {
-        return $this->bicicleta;
+    public function getIdbicicleta() {
+        return $this->idbicicleta;
     }
 }
