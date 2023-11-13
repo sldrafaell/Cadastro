@@ -1,5 +1,5 @@
 <?php 
-class Repositorio {
+class RepositorioCliente {
     public function cadastrar(PDO $banco, Cliente $cliente) {
         $sqlInsert = "INSERT INTO CLIENTE(nome,cpf,pagamento,idade,idbicicleta) VALUES (:n, :c, :p, :i, :id)";
         $insert = $banco->prepare($sqlInsert);
@@ -8,7 +8,7 @@ class Repositorio {
         $cpf = $cliente->getCpf();
         $pagamento = $cliente->getPagamento();
         $idade = $cliente->getIdade();
-        $bicicleta = $cliente->getIdbicicleta();
+        $idbicicleta = $cliente->getIdbicicleta();
 
         $insert->bindParam(":n", $nome);
         $insert->bindParam(":c", $cpf);
