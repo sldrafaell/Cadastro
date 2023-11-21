@@ -1,21 +1,22 @@
 <?php
 
-try {
-    $banco = new PDO("sqlite:../banco.sqlite");
-    echo "Banco conectado";
+try{
+    $banco = new PDO("sqlite:dado.sqlite");
+    echo "Banco conectado! ";
 
-} catch (PDOException $e) {
-    echo "[ERRO] Não foi possivel conectar o banco";
+}catch(PDOException $e){ 
+    echo "[ERRO] O banco não pode ser conectado! ";
     echo $e->getMessage();
 }
 
-$tabela = "CREATE TABLE IF NOT EXISTS CLIENTE(
+$criarTabela = "CREATE TABLE IF NOT EXISTS CLIENTE(
     nome TEXT,
     cpf TEXT,
-    pagamento FLOAT,
-    idade INT,
-    idbicicleta INT,
-    primary key(cpf)
-)";
+    pagamento TEXT,
+    idade TEXT,
+    idbicicleta TEXT,
+    email TEXT,
+    senha TEXT,
+    primary key (cpf))";
 
-$banco->query($tabela);
+$banco->query($criarTabela);

@@ -5,12 +5,14 @@ require "./php/RepositorioCliente.php";
 
 $nome = $_POST['txtNome'];
 $cpf =  $_POST['txtCpf'];
-$pagamento = $_POST['floatPagamento'];
-$idade = $_POST['intIdade'];
-$idbicicleta = $_POST['intIdbicicleta'];
+$pagamento = $_POST['txtPagamento'];
+$idade = $_POST['txtintIdade'];
+$idbicicleta = $_POST['txtIdbicicleta'];
+$email = $_POST['txtEmail'];
+$senha = $_POST['txtSenha'];
 
-$novoAutor = new Cliente($nome, $cpf, $pagamento, $idade, $idbicicleta);
+$novoClinte = new Cliente($nome, $cpf, $pagamento, $idade, $idbicicleta, $email, $senha);
 
 (new RepositorioCliente())->cadastrar($banco,$novoCliente);
 
-header('Location: /'); // Redireciona para a página principal depois que cadastra
+header('Location: /');
