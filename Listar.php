@@ -16,8 +16,7 @@ $valores = (new RepositorioCliente())->exibirTudo($banco);
 ?>
 <table class="table is-striped">
     <tr>
-        <td>Nome</td>
-        <td>Cpf</td>
+        <td>Email</td>
         <td>Pagamento</td>
         <td>Idade</td>
         <td>Id Bicicleta</td>
@@ -25,10 +24,7 @@ $valores = (new RepositorioCliente())->exibirTudo($banco);
     <?php foreach ($valores as $valor): ?>
         <tr>
             <td>
-                <?= $valor['nome'] ?>
-            </td>
-            <td>
-                <?= $valor['cpf'] ?>
+                <?= $valor['email'] ?>
             </td>
             <td>
                 <?= $valor['pagamento'] ?>
