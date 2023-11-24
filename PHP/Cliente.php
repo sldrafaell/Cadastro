@@ -8,56 +8,56 @@ class Cliente {
     private $email;
     private $senha;
 
-    public function __construct(string $nome, string $cpf, string $pagamento, string $idade, string $idbicicleta, string $email, string $senha) {
-        $this->setNome($nome);
-        $this->setCpf($cpf);
-        $this->setPagamento($pagamento);
-        $this->setIdade($idade);
-        $this->setIdbicicleta($idbicicleta);
-        $this->setEmail($email);
-        $this->setSenha($senha);
+    public function __construct(string $n, string $c, string $p, string $i, string $ib, string $e, string $s) {
+        $this->definirNome($n);
+        $this->definirCpf($c);
+        $this->definirPagamento($p);
+        $this->definirIdade($i);
+        $this->definirIdbicicleta($ib);
+        $this->definirEmail($e);
+        $this->definirSenha($s);
     }
-    public function setNome($nome) {
-        $this->nome = $nome;
+    public function definirNome($n) {
+        $this->nome = $n;
     }
-    public function setCpf($cpf) {
-        $this->cpf = $cpf;
+    public function definirCpf($c) {
+        $this->cpf = $c;
     }
-    public function setPagamento($pagamento) {
-        $this->pagamento = $pagamento;
+    public function definirPagamento($p) {
+        $this->pagamento = $p;
     }
-    public function setIdade($idade) {
-        $this->idade = $idade;
+    public function definirIdade($i) {
+        $this->idade = $i;
     }
-    public function setIdbicicleta($idbicicleta) {
-        $this->idbicleta = $idbicicleta;
+    public function definirIdbicicleta($ib) {
+        $this->idbicicleta = $ib;
     }
-    public function setEmail($email) {
-        $this->email = $email;
+    public function definirEmail($e) {
+        $this->email = $e;
     }
-    public function setSenha($senha) {
-        $this->senha = $senha;
+    public function definirSenha($s) {
+        $this->senha = $s;
     }
 
-    public function getNome() {
+    public function exibirNome() {
         return $this->nome;
     }
-    public function getCpf() {
+    public function exibirCpf() {
         return $this->cpf;
     }
-    public function getPagamento() {
+    public function exibirPagamento() {
         return $this->pagamento;
     }
-    public function getIdade() {
+    public function exibirIdade() {
         return $this->idade;
     }
-    public function getIdbicicleta() {
+    public function exibirIdbicicleta() {
         return $this->idbicicleta;
     }
-    public function getEmail() {
+    public function exibirEmail() {
         return $this->email;
     }
-    public function getSenha() {
+    public function exibirSenha() {
         return $this->senha;
     }
 }

@@ -1,21 +1,20 @@
 <?php
 
-class RepositorioCliente
-{
-    
+class RepositorioCliente {
+
     public function cadastrar(PDO $banco, Cliente $cliente)
     {
         $sqlInsert = "INSERT INTO Cliente(nome,cpf,pagamento,idade,idbicicleta,email,senha) VALUES (:n,:c,:p,:i,:id,:e,:s)";
 
         $insert = $banco->prepare($sqlInsert);
 
-        $nome = $cliente->getNome();
-        $cpf = $cliente->getCpf();
-        $pagamento = $cliente->getPagamento();
-        $idade = $cliente->getIdade();
-        $idbicicleta = $cliente->getIdbicicleta();
-        $email = $cliente->getEmail();
-        $senha = $cliente->getSenha();
+        $nome = $cliente->exibirNome();
+        $cpf = $cliente->exibirCpf();
+        $pagamento = $cliente->exibirPagamento();
+        $idade = $cliente->exibirIdade();
+        $idbicicleta = $cliente->exibirIdbicicleta();
+        $email = $cliente->exibirEmail();
+        $senha = $cliente->exibirSenha();
 
         $insert->bindParam(":n", $nome);
         $insert->bindParam(":c", $cpf);
@@ -25,7 +24,6 @@ class RepositorioCliente
         $insert->bindParam(":e", $email);
         $insert->bindParam(":s", $senha);
         
-
         $insert->execute();
     }
 

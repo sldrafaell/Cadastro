@@ -11,7 +11,7 @@
     <div id="background-image"></div>
     <div id="background-overlay"></div>
     <div id="background-pattern"></div>
-    <form action="cadastrar.php" method="POST" class="m-6">
+    <form action="Cadastrar.php" method="POST" class="m-6">
         <di id="login-form-container">
             <div class="card">
                     <div class="content p-4">
@@ -41,7 +41,18 @@
                                 <input class="input" type="text" name="txtIdade" placeholder="Idade">
                             </div>
                         </div> 
-                        <button type="submit" class="button is-primary" href="Alugar.php">Cadastrar</button>
+                        <div class="field">
+                            <div class="control">
+                                <input class="input" type="text" name="txtIdbicicleta" placeholder="Id da bicicleta">
+                            </div>
+                        </div>
+                        <div class="field">
+                            <div class="control">
+                                <input class="input" type="text" name="txtPagamento" placeholder="Tipo de pagamento">
+                            </div>
+                        </div>
+                        <button type="submit" class="button is-primary"><a href="agradecimento.html">Cadastrar</a></button>
+                        <a class="button is-warning" href="listar.php">Listar dados</a>
                     </div>
                 </div>
             </div>

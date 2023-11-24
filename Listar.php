@@ -17,15 +17,21 @@ $valores = (new RepositorioCliente())->exibirTudo($banco);
 ?>
 <table class="table is-striped">
     <tr>
-        <td>Email</td>
+        <td>Nome</td>
+        <td>Cpf</td>
         <td>Pagamento</td>
         <td>Idade</td>
-        <td>Id Bicicleta</td>
+        <td>Id da bicicleta</td>
+        <td>Email</td>
+        <td>Senha</td>
     </tr>
     <?php foreach ($valores as $valor): ?>
         <tr>
             <td>
-                <?= $valor['email'] ?>
+                <?= $valor['nome'] ?>
+            </td>
+            <td>
+                <?= $valor['cpf'] ?>
             </td>
             <td>
                 <?= $valor['pagamento'] ?>
@@ -35,6 +41,12 @@ $valores = (new RepositorioCliente())->exibirTudo($banco);
             </td>
             <td>
                 <?= $valor['idbicicleta'] ?>
+            </td>
+            <td>
+                <?= $valor['email'] ?>
+            </td>
+            <td>
+                <?= $valor['senha'] ?>
             </td>
         </tr>
     <?php endforeach; ?>
