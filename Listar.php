@@ -13,6 +13,7 @@ require "./php/Cliente.php";
 require "./php/RepositorioCliente.php";
 
 $valores = (new RepositorioCliente())->exibirTudo($banco);
+
 ?>
 <table class="table is-striped">
     <tr>

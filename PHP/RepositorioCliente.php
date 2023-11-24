@@ -2,6 +2,7 @@
 
 class RepositorioCliente
 {
+    
     public function cadastrar(PDO $banco, Cliente $cliente)
     {
         $sqlInsert = "INSERT INTO Cliente(nome,cpf,pagamento,idade,idbicicleta,email,senha) VALUES (:n,:c,:p,:i,:id,:e,:s)";

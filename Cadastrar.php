@@ -6,12 +6,12 @@ require "./php/RepositorioCliente.php";
 $nome = $_POST['txtNome'];
 $cpf =  $_POST['txtCpf'];
 $pagamento = $_POST['txtPagamento'];
-$idade = $_POST['txtintIdade'];
+$idade = $_POST['txtIdade'];
 $idbicicleta = $_POST['txtIdbicicleta'];
 $email = $_POST['txtEmail'];
 $senha = $_POST['txtSenha'];
 
-$novoClinte = new Cliente($nome, $cpf, $pagamento, $idade, $idbicicleta, $email, $senha);
+$novoCliente = new Cliente($nome, $cpf, $pagamento, $idade, $idbicicleta, $email, $senha);
 
 (new RepositorioCliente())->cadastrar($banco,$novoCliente);
 
