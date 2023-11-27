@@ -22,6 +22,9 @@
             <p>R$7.500</p>
         </figure>
     </div>
-    <a class="button is-primary m-6 p-4" href="Login.php">Avançar</a>  
+    <div class="m-6">
+        <a class="button is-primary" href="Login.php">Avançar</a>
+        <a class="button is-primary" href="Sobre.html">Sobre nós</a>  
+    </div>
 </body>
 </html>
